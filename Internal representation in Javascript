@@ -1,0 +1,27 @@
+Write a blog about objects and its internal representation in Javascript
+
+In JavaScript, an object is a collection of properties that can contain any data type, including other objects. Objects in JavaScript are dynamic, meaning that you can add or remove properties at any time. In this blog, we will explore the internal representation of objects in JavaScript.
+
+Internal Representation of Objects in JavaScript
+In JavaScript, objects are represented as a collection of key-value pairs. Each key-value pair is called a property. The keys in an object are always strings, and the values can be any data type. The keys are used to access the corresponding values in the object.
+
+Under the hood, an object in JavaScript is represented as a hash table, also known as an associative array. A hash table is a data structure that allows quick access to values based on their keys. In JavaScript, the hash table is implemented as an object with a hidden property called the internal [[Hash]] slot. This slot stores the mapping between keys and their corresponding values.
+
+When you create a new object in JavaScript, a new hash table is created, and the internal [[Hash]] slot is initialized. Each property that you add to the object is stored in the hash table along with its key. When you access a property on an object, JavaScript uses the key to look up the corresponding value in the hash table.
+
+In addition to the internal [[Hash]] slot, JavaScript objects also have other internal slots, such as [[Prototype]] and [[Class]]. The [[Prototype]] slot points to another object that is used as a fallback for properties that are not found in the current object. This is known as prototype-based inheritance, which allows you to create complex object hierarchies.
+
+The [[Class]] slot is used to determine the type of an object. For example, the typeof operator returns "object" for all objects, but you can use the [[Class]] slot to determine whether an object is an array, a date, or a regular object.
+
+Object Methods and Properties
+In addition to properties, JavaScript objects also have methods and properties that are built-in. These methods and properties are inherited from the Object.prototype object, which is the root of the prototype chain.
+
+Some of the built-in methods and properties of objects in JavaScript include:
+
+Object.create(): Creates a new object with the specified prototype object.
+Object.defineProperty(): Defines a new property on an object.
+Object.keys(): Returns an array of all the keys in an object.
+Object.values(): Returns an array of all the values in an object.
+Object.entries(): Returns an array of all the key-value pairs in an object.
+Conclusion
+In conclusion, objects in JavaScript are a powerful feature that allows you to store and manipulate data in a flexible and dynamic way. Under the hood, objects are represented as hash tables, which allows for quick access to values based on their keys. Understanding the internal representation of objects in JavaScript can help you write more efficient and effective code. With the built-in methods and properties of objects, you can create complex object hierarchies and manipulate data in many different ways.
